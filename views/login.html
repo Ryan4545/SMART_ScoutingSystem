@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/CSS/index.css">
+    <title>SMART Login</title>
+</head>
+
+<body>
+    <div class="navBar">
+        <div style="display: flex;">
+            <a href="/">Home</a>
+            <a href="/about">About SMART</a>
+            <span class="navVer" style="font-size: 16px; padding: 26px 18px; cursor: default; margin-left: 20%;">Version 1.1.4</span>
+        </div>
+    </div>
+    <div class="subBar">
+        <p>SMART Identification System</p>
+    </div>
+    <div class="mainContent">
+        <div class="overlay">
+            <h2>Please Login to get Started</h2>
+            <form method="POST" action="/login">
+                <div style="display: flex;">
+                    <input type="password" placeholder="Please Enter Your ID" name="password" id="password">
+                    <input type="submit">
+                </div>
+            </form>
+            <p onclick="forgotId()" style="font-size: 16px; text-decoration: underline; cursor: pointer;">Forgot User ID?</p>
+        </div>
+    </div>
+    <br>
+    <script>
+        function forgotId() {
+            alert('Please Message An Administrator Through The Team Discord Server...')
+        }
+    </script>
+</body>
+
+</html>

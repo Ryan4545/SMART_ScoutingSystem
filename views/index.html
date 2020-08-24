@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/CSS/index.css">
+    <title>4541 Data Visualization</title>
+</head>
+
+<body>
+    <div class="navBar">
+        <div style="display: flex;">
+            <a href="/">Home</a>
+            <span class="navVer" style="font-size: 16px; padding: 26px 18px; cursor: default; margin-left: 20%;">Version 1.1.4</span>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="allCont">
+        <div class="mainLogo bg1">
+            <br><br>
+            <h1>Scouting App Visualization UI</h1>
+            <br><br>
+            <p>The Visualization Experience of the Future</p>
+            <p>By: 4541 Scouting</p>
+        </div>
+        <div class="teamDataRequest bg2">
+            <h1>Get data by team number:</h1>
+            <div style="display: flex;">
+                <input type="number" id="getTeamData" maxlength="4" class="inputTag" placeholder="Team #">
+                <button onclick="getTeamDataInput()" class="Btn">Submit Request</button>
+            </div>
+        </div>
+        <div class="getAvg bg2">
+            <h1>Get Base Data:</h1>
+            <button onclick="getAverage()" class="Btn">Get Data</button>
+        </div>
+        <div class="compare bg2">
+            <h1>Compare Team Data:</h1>
+            <input type="number" id="getTeamDataTeam1" class="inputTag" maxlength="4" placeholder="Team 1"><input type="number" maxlength="4" id="getTeamDataTeam2" class="inputTag" placeholder="Team 2">
+            <button onclick="compareTeams()" class="Btn">Compare</button>
+        </div>
+        <div class="results bg1">
+            <div class="wrapper">
+                <h1>Results:</h1>
+                <br>
+                <div id="results" class="output"></div>
+            </div>
+        </div>
+        <div class="getTeamRanks bg2">
+            <h1>Get Pick List:</h1>
+            <button onclick="getQuantitativePickList()" class="Btn">Get Quantitative List</button><br>
+        </div>
+    </div>
+    <script>
+        let arr = [];
+
+        function htmlDecode(input) {
+            arr = (input.split(','));
+        }
+        var content = htmlDecode(`<%= content %>`);
+    </script>
+    <script src="/public/JS/index.js"></script>
+</body>
+
+</html>
