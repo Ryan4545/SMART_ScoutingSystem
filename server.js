@@ -3,6 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const socketio = require('socket.io');
+const http = require('http');
+const brain = require('brain.js');
 
 const app = express();
 let urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -13,6 +16,13 @@ app.use("/public", express.static(path.join(__dirname, 'public')));
 app.use("/ParsedData", express.static(path.join(__dirname, 'ParsedData')));
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
+
+const server = http.createServer(app);
+const io = socketio(server);
+
+io.on('connection', socket => {
+    socket.emit('dataTransition', allFiles);
+})
 
 let allFiles = [];
 
@@ -82,4 +92,4 @@ app.post('/login', urlencodedParser, function(req, res) {
 });
 
 console.log(`Starting Server on access PORT ${PORT}! `)
-app.listen(PORT);
+server.listen(PORT);
