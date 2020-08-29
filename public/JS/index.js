@@ -188,11 +188,11 @@ async function compareTeams() {
         alert('Team Number 2 is not within our dataset! :(');
     } else {
         if (team1Points > team2Points && team1Points != team2Points) {
-            document.getElementById('results').innerHTML = `<div class="averageResults"><div style="display: flex;"><div style="border-right: 2px solid #ddd; padding-right: 9px; margin-right: 18px;">${team1}'s Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points}</div><div>${team2}'s Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>${team2} scored a ${team2Points}</div></div></div>`
+            document.getElementById('results').innerHTML = `<div class="averageResults"><div style="display: flex;"><div style="border-right: 2px solid #ddd; padding-right: 9px; margin-right: 18px;">${team1}'s Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points} / ${team1Points + team2Points}</div><div>${team2}'s Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>${team2} scored a ${team2Points} / ${team1Points + team2Points}</div></div></div>`
         } else if (team1Points == team2Points) {
-            document.getElementById('results').innerHTML = `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points}</div><div>${team2}'s Stats:<br><ul><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>${team2} scored a ${team2Points}</div></div></div>`
+            document.getElementById('results').innerHTML = `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points} / ${team1Points + team2Points}</div><div>${team2}'s Stats:<br><ul><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>${team2} scored a ${team2Points} / ${team1Points + team2Points}</div></div></div>`
         } else {
-            document.getElementById('results').innerHTML = `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points}</div><div>${team2}'s Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>${team2} scored a ${team2Points}</div></div></div>`
+            document.getElementById('results').innerHTML = `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points} / ${team1Points + team2Points}</div><div>${team2}'s Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>${team2} scored a ${team2Points} / ${team1Points + team2Points}</div></div></div>`
         }
     }
 }
@@ -238,8 +238,8 @@ async function getQuantitativePickList() {
 
     for (i = 0; i < data.length; i++) {
         if (data[i].teamNum == undefined) {
-            let curPoints = 0;
             let teamNumber = '';
+            let curPoints = 0;
             let numberOfClimbs1 = 0;
             let avgStage3Spin1 = 0;
             let avgStage2Spin1 = 0;
@@ -396,11 +396,11 @@ async function compareTeamToBase(team1) {
         alert('Team Number 1 is not within our dataset! :(');
     } else {
         if (team1Points > team2Points && team1Points != team2Points) {
-            return `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points}</div><div>Base Line's Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>Base Line scored a ${team2Points}</div></div></div>`
+            return `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points} / ${team1Points + team2Points}</div><div>Base Line's Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>Base Line scored a ${team2Points} / ${team1Points + team2Points}</div></div></div>`
         } else if (team1Points == team2Points) {
-            return `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points}</div><div>Base Line's Stats:<br><ul><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>Base Line scored a ${team2Points}</div></div></div>`
+            return `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points} / ${team1Points + team2Points}</div><div>Base Line's Stats:<br><ul><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>Base Line scored a ${team2Points} / ${team1Points + team2Points}</div></div></div>`
         } else {
-            return `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points}</div><div>Base Line's Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>Base Line scored a ${team2Points}</div></div></div>`
+            return `<div class="averageResults"><div style="display: flex;"><div>${team1}'s Stats:<br><ul style="color: red;"><li>Average Pickups: ${avgData1.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData1.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData1.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData1.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData1.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData1.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData1.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData1.avgDefenseMoves.round(3)}</li></ul><br>${team1} scored a ${team1Points} / ${team1Points + team2Points}</div><div>Base Line's Stats:<br><ul style="color: green;"><li>Average Pickups: ${avgData2.avgPickups.round(3)}</li><li>Average Deliveries Lower Port: ${avgData2.avgDeliveriesLvl1.round(3)}</li><li>Average Deliveries Outer Port: ${avgData2.avgDeliveriesLvl2.round(3)}</li><li>Average Deliveries Inner Port: ${avgData2.avgDeliveriesLvl3.round(3)}</li><li>Average Climbs: ${avgData2.avgClimbs.round(3)}</li><li>Average Stage 2 Completions: ${avgData2.avgStage2Spin.round(3)}</li><li>Average Stage 3 Completions: ${avgData2.avgStage3Spin.round(3)}</li><li>Average Defensive Moves: ${avgData2.avgDefenseMoves.round(3)}</li></ul><br>Base Line scored a ${team2Points} / ${team1Points + team2Points}</div></div></div>`
         }
     }
 }
@@ -408,4 +408,157 @@ async function compareTeamToBase(team1) {
 
 async function getDetails(teamNumber) {
     document.getElementById('results').innerHTML = await compareTeamToBase(teamNumber);
+}
+
+// io
+const socket = io();
+
+
+socket.on('getPickClient', () => {
+    let data = getQuantitativePickListForServer().then((importData) => {
+        setTimeout(() => {
+            console.log('Sending Data' + " " + importData);
+            socket.emit('pickData', importData);
+        }, 5000)
+    });
+})
+
+async function getQuantitativePickListForServer() {
+    let data = [];
+
+    for (i = 0; i < arr.length; i++) {
+        if (i != 0) {
+            fetch(`../ParsedData/${arr[i]}`).then(response => response.json()).then(jsonResponse => {
+                for (x = 0; x < data.length; x++) {
+                    let curData = [];
+                    let jsonData = [];
+                    if (data[x].teamNum.includes(jsonResponse.teamNum)) {
+                        curData.push(data[x]);
+                        jsonData.push(jsonResponse)
+                        data[x] = curData.concat(jsonData);
+                        break;
+                    } else if (x == data.length - 1) {
+                        data.push(jsonResponse);
+                        break;
+                    }
+                }
+            });
+            await wait(700);
+        } else {
+            fetch(`../ParsedData/${arr[i]}`).then(response => response.json()).then(jsonResponse => {
+                data.push(jsonResponse);
+            })
+            await wait(700);
+        }
+    }
+
+    let averageData = await getAverageData();
+    let points = [];
+
+    for (i = 0; i < data.length; i++) {
+        if (data[i].teamNum == undefined) {
+            let teamNumber = '';
+            let curPoints = 0;
+            let numberOfClimbs1 = 0;
+            let avgStage3Spin1 = 0;
+            let avgStage2Spin1 = 0;
+            for (x = 0; x < data[i].length; x++) {
+                teamNumber = data[i][x].teamNum
+                if (data[i][x].metrics.deliveriesLvl3 > averageData.avgDeliveriesLvl3 && data[i][x].metrics.deliveriesLvl3 != averageData.avgDeliveriesLvl3) {
+                    curPoints += 1.25;
+                }
+                if (data[i][x].metrics.deliveriesLvl2 > averageData.avgDeliveriesLvl2 && data[i][x].metrics.deliveriesLvl2 != averageData.avgDeliveriesLvl2) {
+                    curPoints++;
+                }
+                if (data[i][x].metrics.deliveriesLvl1 > averageData.avgDeliveriesLvl1 && data[i][x].metrics.deliveriesLvl1 != averageData.avgDeliveriesLvl1) {
+                    curPoints++;
+                }
+                if (data[i][x].metrics.numberOfPickups > averageData.avgPickups && data[i][x].metrics.numberOfPickups != averageData.avgPickups) {
+                    curPoints += 0.75;
+                }
+                if (data[i][x].metrics.climb == "YES") {
+                    numberOfClimbs1++;
+                }
+                if (data[i][x].metrics.stage2Spin == "Spun_3-5_times") {
+                    avgStage2Spin1++;
+                }
+                if (data[i][x].metrics.stage2Spin == "LandedOnColor") {
+                    avgStage3Spin1++;
+                }
+                if ((data[i][x].metrics.numPins + data[i][x].metrics.numPush + data[i][x].metrics.numDisrupted) > averageData.avgDefenseMoves && (data[i][x].metrics.numPins + data[i][x].metrics.numPush + data[i][x].metrics.numDisrupted) != averageData.avgDefenseMoves) {
+                    curPoints++;
+                }
+            }
+            if (numberOfClimbs1 > averageData.avgClimbs && numberOfClimbs1 != averageData.avgClimbs) {
+                curPoints += 1.50;
+            }
+            if (avgStage2Spin1 > averageData.avgStage2Spin && avgStage2Spin1 != averageData.avgStage2Spin) {
+                curPoints++;
+            }
+            if (avgStage3Spin1 > averageData.avgStage3Spin && avgStage3Spin1 != averageData.avgStage3Spin) {
+                curPoints++;
+            }
+            points.push(`${teamNumber}_` + curPoints / data[i].length);
+        } else {
+            let curPoints2 = 0;
+            let numberOfClimbs2 = 0;
+            let avgStage3Spin2 = 0;
+            let avgStage2Spin2 = 0;
+
+            if (data[i].metrics.deliveriesLvl3 > averageData.avgDeliveriesLvl3 && data[i].metrics.deliveriesLvl3 != averageData.avgDeliveriesLvl3) {
+                curPoints2 += 1.25
+            }
+            if (data[i].metrics.deliveriesLvl2 > averageData.avgDeliveriesLvl2 && data[i].metrics.deliveriesLvl2 != averageData.avgDeliveriesLvl2) {
+                curPoints2++
+            }
+            if (data[i].metrics.deliveriesLvl1 > averageData.avgDeliveriesLvl1 && data[i].metrics.deliveriesLvl1 != averageData.avgDeliveriesLvl1) {
+                curPoints2++
+            }
+            if (data[i].metrics.numberOfPickups > averageData.avgPickups && data[i].metrics.numberOfPickups != averageData.avgPickups) {
+                curPoints2 += 0.75;
+            }
+            if (data[i].metrics.climb == "YES") {
+                numberOfClimbs2++;
+            }
+            if (data[i].metrics.stage2Spin == "Spun_3-5_times") {
+                avgStage2Spin2++;
+            }
+            if (data[i].metrics.stage2Spin == "LandedOnColor") {
+                avgStage3Spin2++;
+            }
+            if ((data[i].metrics.numPins + data[i].metrics.numPush + data[i].metrics.numDisrupted) > averageData.avgDefenseMoves && (data[i].metrics.numPins + data[i].metrics.numPush + data[i].metrics.numDisrupted) != averageData.avgDefenseMoves) {
+                curPoints2++;
+            }
+            if (numberOfClimbs2 > averageData.avgClimbs && numberOfClimbs2 != averageData.avgClimbs) {
+                curPoints2 += 1.50;
+            }
+            if (avgStage2Spin2 > averageData.avgStage2Spin && avgStage2Spin2 != averageData.avgStage2Spin) {
+                curPoints2++;
+            }
+            if (avgStage3Spin2 > averageData.avgStage3Spin && avgStage3Spin2 != averageData.avgStage3Spin) {
+                curPoints2++;
+            }
+            points.push(`${data[i].teamNum}_${curPoints2}`)
+        }
+    }
+    let printData = '';
+
+    points.sort(function(p1, p2) {
+        if (parseFloat(p1.substring(p1.lastIndexOf('_') + 1)) > parseFloat(p2.substring(p2.lastIndexOf('_') + 1))) {
+            return -1;
+        } else {
+            return 1;
+        }
+    })
+
+    await wait(700);
+
+    for (i = 0; i < points.length; i++) {
+        if (i < 4) {
+            printData += `${points[i].substring(3, points[i].lastIndexOf("_"))}: ${points[i].substring(points[i].lastIndexOf("_") + 1)}\n`
+        } else {
+            printData += `${points[i].substring(3, points[i].lastIndexOf("_"))}: ${points[i].substring(points[i].lastIndexOf("_") + 1)}\n`;
+        }
+    }
+    return (`Pick List Data:\n${printData}\nThis data was calculated by comparing each team to the base line data and giving them points based on performance. The higher the score is the better they compared to the base line data.</div>`);
 }

@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const socketio = require('socket.io');
 const http = require('http');
-const brain = require('brain.js');
+const discord = require('discord.js');
+const { createInterface } = require('readline');
+const client = new discord.Client();
 
 const app = express();
 let urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -22,6 +24,12 @@ const io = socketio(server);
 
 io.on('connection', socket => {
     socket.emit('dataTransition', allFiles);
+
+    socket.on('pickData', (data) => {
+        fs.writeFileSync('pickLists/newList.txt', data, (err) => {
+            if (err) throw err
+        });
+    })
 })
 
 let allFiles = [];
@@ -93,3 +101,34 @@ app.post('/login', urlencodedParser, function(req, res) {
 
 console.log(`Starting Server on access PORT ${PORT}! `)
 server.listen(PORT);
+
+// Discord Bot Messaging Systems
+
+client.on('ready', () => {
+    client.guilds.cache.forEach((guild) => {
+        guild.channels.cache.forEach((channel) => {
+            // console.log(` -> ${guild.name}: ${channel.name} ${channel.id} ${channel.type}`); // This gives channel bot has access to
+        });
+    });
+    console.log('>>All Discord Bot Systems Ready Awaiting Instructions...');
+})
+
+client.on('message', (receivedMessage) => {
+    if (receivedMessage.author == client.user) {
+        return
+    }
+    if (receivedMessage.content == "!pickList") {
+        receivedMessage.channel.send('Please Wait One Minute While The Data Is Processed');
+        io.sockets.emit('getPickClient')
+        setTimeout(() => {
+            // receivedMessage.channel.send(new Discord.Attachment('pickLists/newList.txt', 'newList.txt')).catch(console.error);
+            receivedMessage.channel.send('Data: ', {
+                files: [
+                    'pickLists/newList.txt'
+                ]
+            })
+        }, 10000)
+    }
+})
+
+client.login('NjU2MjUyODE5OTQyMTQ2MDg4.Xff9EA.ZICghEXNDngqWbbi-RqVw-fDWd4');

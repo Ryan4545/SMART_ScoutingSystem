@@ -1,0 +1,9 @@
+Pick List Data:
+5841: 3.25
+4541: 3
+2900: 2.75
+449: 2
+6863: 0.5
+
+
+This data was calculated by comparing each team to the base line data and giving them points based on performance. The higher the score is the better they compared to the base line data.</div>

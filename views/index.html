@@ -12,7 +12,7 @@
     <div class="navBar">
         <div style="display: flex;">
             <a href="/">Home</a>
-            <span class="navVer" style="font-size: 16px; padding: 26px 18px; cursor: default; margin-left: 20%;">Version 1.1.4</span>
+            <span class="navVer" style="font-size: 16px; padding: 12px 13px; cursor: default; margin-right: auto; margin-left: auto;">Version 1.1.4</span>
         </div>
     </div>
     <br><br><br>
@@ -44,13 +44,42 @@
             <div class="wrapper">
                 <h1>Results:</h1>
                 <br>
-                <div id="results" class="output"></div>
+                <div class="tabList">
+                    <div class="headerBar">
+                        <div class="readyBar" style="display: flex;">
+                            <div class="redBar"></div>
+                            <div class="yellowBar"></div>
+                            <div class="greenBar"></div>
+                        </div>
+                        <div class="clickableElement">
+                            <div class="rank" onclick="getQuantitativePickList()" id="allianceCompare">Get Pick List</div>
+                            <div class="rank" onclick="getAverage()" id="allianceCompare">Get Average Data</div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="scrollable">
+                        <table cellspacing="50">
+                            <tr>
+                                <td>
+                                    <img src="/public/CSS/loadingGif2.gif" style="display: none;" width="150px" height="auto" id="loading2">
+                                </td>
+                                <td>
+                                    <div id="results" class="output"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+
             </div>
         </div>
         <div class="getTeamRanks bg2">
             <h1>Get Pick List:</h1>
             <button onclick="getQuantitativePickList()" class="Btn">Get Quantitative List</button><br>
         </div>
+        <br><br><br><br>
     </div>
     <script>
         let arr = [];
