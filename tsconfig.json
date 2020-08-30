@@ -1,1 +1,13 @@
-{}
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "watch": true,
+        "outDir": "public/JS",
+        "rootDir": "public/TS",
+        "module": "ES6",
+        "removeComments": true
+    },
+    "files": [
+        "public/TS/terminal.ts"
+    ]
+}

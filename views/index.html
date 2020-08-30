@@ -47,13 +47,14 @@
                 <div class="tabList">
                     <div class="headerBar">
                         <div class="readyBar" style="display: flex;">
-                            <div class="redBar"></div>
-                            <div class="yellowBar"></div>
-                            <div class="greenBar"></div>
+                            <div class="redBar" onclick="closeTerminal()"></div>
+                            <div class="yellowBar" onclick="closeTerminal()"></div>
+                            <div class="greenBar" onclick="openTerminal()"></div>
                         </div>
                         <div class="clickableElement">
                             <div class="rank" onclick="getQuantitativePickList()" id="allianceCompare">Get Pick List</div>
                             <div class="rank" onclick="getAverage()" id="allianceCompare">Get Average Data</div>
+                            <div class="rank" onclick="openTerminal()" id="allianceCompare">Open Console / Terminal</div>
                         </div>
                     </div>
                     <br>
@@ -66,11 +67,17 @@
                                 </td>
                                 <td>
                                     <div id="results" class="output"></div>
+                                    <div id="terminal" class="terminal">
+                                        <div class="innerTerm">
+                                            <div id="output" class="termOutput"></div>
+                                            <br>
+                                            <input type="text" class="terminalCmd" id="cmd" onkeypress="submitCmd(event)" placeholder="Enter Command">
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </table>
                     </div>
-                    <div class="footer"></div>
                 </div>
 
             </div>
@@ -91,7 +98,7 @@
     </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/public/JS/index.js"></script>
-    <script src="/public/TS/compute.js"></script>
+    <script src="/public/JS/terminal.js"></script>
 </body>
 
 </html>

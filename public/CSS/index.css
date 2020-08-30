@@ -190,10 +190,6 @@ body {
     overflow-y: scroll;
 }
 
-.tabList input {
-    margin-left: 1rem;
-}
-
 .readyBar {
     border-radius: 4px;
     background: #44525B;
@@ -251,7 +247,7 @@ body {
 .rank {
     margin-top: 3px;
     text-align: center;
-    width: 17%;
+    width: 20%;
     color: #B3BBC1;
     border-right: 1px solid #4C5861;
     border-left: 1px solid #4C5861;
@@ -321,4 +317,44 @@ body {
 .scrollable {
     height: 100%;
     width: auto;
+}
+
+
+/* Terminal Systems */
+
+.terminal {
+    display: none;
+    color: white;
+    width: 750px;
+}
+
+.terminalCmd {
+    background: rgb(46, 46, 46);
+    border: none;
+    color: #54C22C;
+    padding: 10px;
+    font-size: 20px;
+    width: 750px;
+}
+
+.termOutput {
+    background: rgb(46, 46, 46);
+    padding: 10px;
+    font-size: 18px;
+    width: 750px;
+    text-align: left;
+    min-height: 300px;
+    word-wrap: break-word;
+}
+
+.smartMsgRes:nth-child(odd) {
+    color: rgb(0, 140, 255);
+}
+
+.smartMsgRes:nth-child(even) {
+    color: rgb(0, 110, 255);
+}
+
+.innerTerm {
+    width: 750px;
 }

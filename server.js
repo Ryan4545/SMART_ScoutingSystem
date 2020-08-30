@@ -27,9 +27,14 @@ io.on('connection', socket => {
 
     socket.on('pickData', (data) => {
         fs.writeFileSync('pickLists/newList.txt', data, (err) => {
+            console.log('Loggin')
             if (err) throw err
         });
-    })
+        fs.writeFileSync('public/misc/pickList.txt', data, (err) => {
+            console.log('Loggin')
+            if (err) throw err
+        });
+    });
 })
 
 let allFiles = [];
@@ -92,7 +97,7 @@ app.post('/login', urlencodedParser, function(req, res) {
     for (i = 0; i < data.users.length; i++) {
         if (data.users[i] == req.body.password) {
             id = makeid(8);
-            res.cookie('login_data_apiToken133242', `userID:22345889837627${data.users[i]}_${id}`, options).redirect('/dash?api=' + id);
+            res.cookie('login_data_apiToken133242', `userID:22345889837627${data.users[i]}_${id}`, options).redirect(`/dash?api=${id}#${data.users[i]}`);
         } else if (i == data.users.length - 1) {
             res.redirect('/');
         }
